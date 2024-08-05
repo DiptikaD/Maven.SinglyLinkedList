@@ -85,8 +85,6 @@ public class SinglyLinkedList {
 
     public SinglyLinkedList sort() {
         SinglyLinkedList newSingList = new SinglyLinkedList();
-//        Node[] newList = new Node[singlyList.length];
-//        newList = Arrays.copyOf(singlyList, singlyList.length);
 
         for (int i =0; i < singlyList.length; i++){
 
@@ -107,16 +105,6 @@ public class SinglyLinkedList {
         }
         return newSingList;
     }
-
-//    - add -- add an element to the list
-//	- remove -- remove an element (specified by numeric index) from the list
-//	- contains -- returns true if the element is in the list, false otherwise
-//	- find -- returns the element's index if it is in the list, -1 otherwise
-//	- size -- returns the current size of the list
-//	- get -- returns the element at the specified index
-//	- copy -- returns a new linked list containing the same values (look up deep versus shallow copy)
-//	- sort -- sorts the list using your algorithm of choice. You must perform the sorting yourself (no fair using someone else's library)
-
 
     public class Node {
 
