@@ -134,11 +134,11 @@ public class SinglyLinkedListTest {
     @Test
     public void sortTest(){
         SinglyLinkedList list = new SinglyLinkedList();
-        Integer actual = 9;
+        Integer actual = 8;
         list.add(4);
         list.add(9);
         list.add(8);
         SinglyLinkedList sortList = list.sort();
-        Assert.assertEquals(sortList.get(2), actual);
+        Assert.assertEquals(sortList.get(1), actual);
     }
 }

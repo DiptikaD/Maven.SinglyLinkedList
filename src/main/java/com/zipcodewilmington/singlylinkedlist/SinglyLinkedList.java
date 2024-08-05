@@ -84,25 +84,28 @@ public class SinglyLinkedList {
     }
 
     public SinglyLinkedList sort() {
-        SinglyLinkedList newList = new SinglyLinkedList();
-        newList = copy();
-
-
+        SinglyLinkedList newSingList = new SinglyLinkedList();
+//        Node[] newList = new Node[singlyList.length];
+//        newList = Arrays.copyOf(singlyList, singlyList.length);
 
         for (int i =0; i < singlyList.length; i++){
+
             Integer minValue =Integer.MAX_VALUE;
-            for (int j = 0; j < singlyList.length; j++){
-            if (singlyList[j].nodeValue > singlyList[i].nodeValue && singlyList[j].nodeValue < minValue) {
+
+            for (int j = i; j < singlyList.length; j++){
+            if (singlyList[i].nodeValue < singlyList[j].nodeValue) {
+                minValue = singlyList[i].nodeValue;
+            } else if (singlyList[j].nodeValue < singlyList[i].nodeValue && singlyList[j].nodeValue < minValue){
                 minValue = singlyList[j].nodeValue;
             }
 
             }
-            if (singlyList[i].nodeValue.equals(minValue)){
-                newList.add(singlyList[i].nodeValue);
+            if (singlyList[i].nodeValue >=(minValue)){
+                newSingList.add(minValue);
             }
 
         }
-        return newList;
+        return newSingList;
     }
 
 //    - add -- add an element to the list
